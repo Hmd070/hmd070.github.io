@@ -3,153 +3,229 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VORMIQ — Premium Ontwerpbureau</title>
 
-<meta name="description" content="VORMIQ is een premium ontwerpbureau voor branding, logo design, websites en digitale creatie. Vorm + IQ.">
+<title>VORMIQ — Premium Design & Digital Intelligence</title>
+
+<meta name="description" content="VORMIQ is een premium grafisch en digitaal ontwerpbureau. Branding, webdesign, visuals, AI-creatie en motion. Vorm + IQ. Actief sinds 2016.">
 <meta name="robots" content="index, follow">
+<meta name="author" content="VORMIQ">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
-:root {
-  --bg:#07090e;
-  --panel:#0e1118;
-  --fg:#f4f6fb;
+/* ================================
+   DESIGN SYSTEM — VORMIQ
+================================ */
+:root{
+  --bg:#05070c;
+  --panel:#0b0f18;
+  --fg:#f4f6ff;
   --muted:#9aa1af;
-  --accent:#3b82f6;
-  --radius:18px;
+  --blue:#1e7cff;
+  --pink:#e8487a;
+  --radius:22px;
+  --max:1200px;
 }
 
-* {margin:0;padding:0;box-sizing:border-box;}
+*{margin:0;padding:0;box-sizing:border-box}
 
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+html,body{
+  font-family:'Inter',system-ui,sans-serif;
   background:
-    radial-gradient(900px 400px at 80% -10%, rgba(59,130,246,.25), transparent 60%),
+    radial-gradient(900px 400px at 80% -10%, rgba(30,124,255,.25), transparent 60%),
     var(--bg);
   color:var(--fg);
   line-height:1.6;
 }
 
-a {color:inherit;text-decoration:none;}
+a{color:inherit;text-decoration:none}
 
-nav {
-  position:sticky;
+/* ================================
+   NAVIGATION
+================================ */
+nav{
+  position:fixed;
   top:0;
-  z-index:50;
+  width:100%;
+  z-index:1000;
   backdrop-filter:blur(14px);
-  background:rgba(7,9,14,.75);
-  border-bottom:1px solid rgba(255,255,255,.05);
+  background:rgba(5,7,12,.75);
+  border-bottom:1px solid rgba(255,255,255,.06);
 }
 
-.nav-inner {
-  max-width:1200px;
+.nav-inner{
+  max-width:var(--max);
   margin:auto;
-  padding:22px;
+  padding:18px 22px;
   display:flex;
-  justify-content:space-between;
   align-items:center;
+  justify-content:space-between;
 }
 
-.logo {
+.logo{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.logo img{
+  height:44px;
+}
+
+.logo-text{
   font-weight:900;
-  letter-spacing:.22em;
-  font-size:20px;
+  letter-spacing:.28em;
 }
 
-.nav-cta {
-  background:var(--accent);
+.nav-cta{
+  background:var(--blue);
   padding:12px 26px;
   border-radius:999px;
   font-weight:600;
 }
 
-.container {
-  max-width:1200px;
-  margin:auto;
+/* ================================
+   SECTIONS
+================================ */
+section{
   padding:140px 22px;
 }
 
-.hero h1 {
-  font-size:clamp(42px,6vw,84px);
+.container{
+  max-width:var(--max);
+  margin:auto;
+}
+
+h1{
+  font-size:clamp(44px,6vw,88px);
   font-weight:900;
   line-height:1.05;
   letter-spacing:-.03em;
-  margin-bottom:28px;
 }
 
-.hero h1 span {color:var(--accent);}
-
-.hero p {
-  max-width:640px;
-  color:var(--muted);
-  font-size:19px;
-  margin-bottom:48px;
-}
-
-.buttons {
-  display:flex;
-  gap:20px;
-  flex-wrap:wrap;
-}
-
-.btn {
-  padding:18px 36px;
-  border-radius:999px;
-  border:1px solid rgba(255,255,255,.18);
-  font-weight:600;
-}
-
-.btn.primary {
-  background:var(--accent);
-  border:none;
-}
-
-section h2 {
-  font-size:40px;
+h2{
+  font-size:clamp(32px,4vw,56px);
   font-weight:800;
-  margin-bottom:18px;
+  margin-bottom:20px;
 }
 
-.lead {
-  max-width:640px;
+h3{
+  font-size:22px;
+  font-weight:700;
+}
+
+.lead{
+  max-width:760px;
   color:var(--muted);
-  margin-bottom:70px;
-}
-
-.grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:36px;
-}
-
-.card {
-  background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,0));
-  border:1px solid rgba(255,255,255,.08);
-  padding:42px;
-  border-radius:var(--radius);
-}
-
-.card h3 {margin-bottom:14px;}
-
-.card p {color:var(--muted);}
-
-blockquote {
   font-size:18px;
 }
 
-.author {
-  margin-top:18px;
+/* ================================
+   HERO
+================================ */
+.hero{
+  padding-top:220px;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:80px;
+  align-items:center;
+}
+
+.hero-visual{
+  height:420px;
+  border-radius:var(--radius);
+  border:1px solid rgba(255,255,255,.08);
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--muted);
   font-size:14px;
+}
+
+/* ================================
+   BUTTONS
+================================ */
+.buttons{
+  margin-top:48px;
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  padding:18px 36px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.2);
+  font-weight:600;
+}
+
+.btn.primary{
+  background:var(--blue);
+  border:none;
+}
+
+/* ================================
+   GRID & CARDS
+================================ */
+.grid{
+  margin-top:80px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:40px;
+}
+
+.card{
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,0));
+  border:1px solid rgba(255,255,255,.08);
+  padding:44px;
+  border-radius:var(--radius);
+}
+
+.card p{color:var(--muted)}
+
+.media{
+  height:220px;
+  border-radius:var(--radius);
+  margin-bottom:24px;
+  border:1px dashed rgba(255,255,255,.15);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:13px;
   color:var(--muted);
 }
 
-/* REVIEWS */
-.review-list .card {position:relative;}
-.stars {color:#facc15;margin-bottom:10px;}
+/* ================================
+   PRICING
+================================ */
+.price{
+  font-size:22px;
+  font-weight:700;
+  margin-top:14px;
+}
 
-/* FORM */
-form input, form textarea {
+/* ================================
+   REVIEWS
+================================ */
+.stars{
+  color:#facc15;
+  margin-bottom:10px;
+}
+
+/* ================================
+   FORMS
+================================ */
+input,textarea{
   width:100%;
-  background:#0b0e15;
+  background:#0b0f18;
   border:1px solid rgba(255,255,255,.12);
   padding:16px;
   border-radius:12px;
@@ -157,35 +233,33 @@ form input, form textarea {
   margin-bottom:16px;
 }
 
-form button {
-  background:var(--accent);
-  border:none;
-  padding:16px 30px;
-  border-radius:999px;
-  font-weight:600;
-  cursor:pointer;
-}
-
-/* FOOTER */
-footer {
+/* ================================
+   FOOTER & WHATSAPP
+================================ */
+footer{
   border-top:1px solid rgba(255,255,255,.06);
-  padding:80px 22px;
+  padding:90px 22px;
   text-align:center;
   color:var(--muted);
-  font-size:14px;
 }
 
-/* WHATSAPP */
-.whatsapp {
+.whatsapp{
   position:fixed;
   right:24px;
   bottom:24px;
   background:#22c55e;
   color:#fff;
-  padding:16px 26px;
+  padding:16px 22px;
   border-radius:999px;
   font-weight:600;
-  box-shadow:0 30px 60px rgba(0,0,0,.6);
+}
+
+/* ================================
+   MOBILE
+================================ */
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-visual{height:300px}
 }
 </style>
 </head>
@@ -194,97 +268,173 @@ footer {
 
 <nav>
   <div class="nav-inner">
-    <div class="logo">VORMIQ</div>
+    <div class="logo">
+      <img src="vormiqlogo.png" alt="VORMIQ logo">
+      <div class="logo-text">VORMIQ</div>
+    </div>
     <a href="#contact" class="nav-cta">Start project</a>
   </div>
 </nav>
 
-<div class="container hero">
-  <h1>Creatieve intelligentie<br><span>voor merken met ambitie</span></h1>
-  <p>
-    VORMIQ is een strategisch ontwerpbureau voor branding, logo’s,
-    websites en digitale creatie. Geen ruis. Alleen kwaliteit.
-  </p>
-  <div class="buttons">
-    <a href="#contact" class="btn primary">Project starten</a>
-    <a href="#diensten" class="btn">Bekijk diensten</a>
-  </div>
-</div>
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>Vorm met visie.<br><span style="color:var(--blue)">Intelligentie in design.</span></h1>
+      <p class="lead">
+        VORMIQ is een premium grafisch en digitaal ontwerpbureau.
+        Wij combineren esthetiek met strategie, technologie en creativiteit.
+      </p>
 
-<section id="diensten" class="container">
-  <h2>Diensten</h2>
-  <p class="lead">Wij bouwen merken en digitale ervaringen die vertrouwen en autoriteit uitstralen.</p>
-  <div class="grid">
-    <div class="card"><h3>Branding & Logo</h3><p>Strategische identiteit met een sterke visuele kern.</p></div>
-    <div class="card"><h3>Webdesign</h3><p>Premium websites die converteren en professioneel ogen.</p></div>
-    <div class="card"><h3>Video & Motion</h3><p>Doordachte edits en animaties met impact.</p></div>
-    <div class="card"><h3>Content & Print</h3><p>Socials, flyers en visuele content in één lijn.</p></div>
-  </div>
-</section>
-
-<section class="container">
-  <h2>Wat klanten zeggen</h2>
-  <p class="lead">Echte ervaringen van ondernemers en creatives.</p>
-
-  <div class="grid review-list" id="reviews">
-    <div class="card">
-      <div class="stars">★★★★★</div>
-      <blockquote>“VORMIQ begrijpt branding écht. Alles klopt tot in detail.”</blockquote>
-      <div class="author">— Ondernemer</div>
+      <div class="buttons">
+        <a href="#diensten" class="btn primary">Diensten</a>
+        <a href="#prijzen" class="btn">Prijzen</a>
+      </div>
     </div>
-    <div class="card">
-      <div class="stars">★★★★★</div>
-      <blockquote>“Professioneel, snel en een premium uitstraling.”</blockquote>
-      <div class="author">— Marketing manager</div>
+
+    <div class="hero-visual">
+      [ Hero video / motion / stock footage ]
     </div>
   </div>
 </section>
 
-<section class="container">
-  <h2>Review toevoegen (admin)</h2>
-  <p class="lead">Voor jezelf om later echte klantreviews toe te voegen.</p>
+<section id="diensten">
+  <div class="container">
+    <h2>Diensten</h2>
+    <p class="lead">
+      Alles wat een modern merk nodig heeft om op te vallen en te groeien.
+    </p>
 
-  <div class="card">
-    <input id="reviewText" placeholder="Review tekst">
-    <input id="reviewAuthor" placeholder="Naam / functie">
-    <button onclick="addReview()">Review toevoegen</button>
+    <div class="grid">
+      <div class="card">
+        <div class="media">Branding visuals</div>
+        <h3>Branding & Logo</h3>
+        <p>Logo’s, huisstijlen en visuele systemen met karakter.</p>
+      </div>
+
+      <div class="card">
+        <div class="media">Web visuals</div>
+        <h3>Webdesign</h3>
+        <p>Professionele websites die vertrouwen en conversie uitstralen.</p>
+      </div>
+
+      <div class="card">
+        <div class="media">Artwork</div>
+        <h3>Artwork & Covers</h3>
+        <p>Albumcovers, flyers en digitale visuals.</p>
+      </div>
+
+      <div class="card">
+        <div class="media">AI & Motion</div>
+        <h3>AI & Motion Design</h3>
+        <p>Geavanceerde visuals, animaties en AI-creatie.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<section id="contact" class="container">
-  <h2>Start een project</h2>
-  <p class="lead">Vertel kort over je project en we nemen contact op.</p>
+<section id="prijzen">
+  <div class="container">
+    <h2>Prijzen</h2>
+    <p class="lead">
+      Transparant, eerlijk en premium. Geen bulkwerk, alleen kwaliteit.
+    </p>
 
-  <form action="https://formspree.io/f/xbjvleqd" method="POST">
-    <input type="text" name="name" placeholder="Naam" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <textarea name="message" rows="5" placeholder="Projectbeschrijving" required></textarea>
-    <button type="submit">Versturen</button>
-  </form>
+    <div class="grid">
+      <div class="card">
+        <h3>Logo & Branding</h3>
+        <p>Uniek logo + visuele basis.</p>
+        <div class="price">vanaf €350</div>
+      </div>
+
+      <div class="card">
+        <h3>Website</h3>
+        <p>High-end website, mobiel & SEO-ready.</p>
+        <div class="price">vanaf €750</div>
+      </div>
+
+      <div class="card">
+        <h3>Artwork / Covers</h3>
+        <p>Voor artiesten & merken.</p>
+        <div class="price">vanaf €150</div>
+      </div>
+
+      <div class="card">
+        <h3>AI & Motion</h3>
+        <p>Animaties & AI visuals.</p>
+        <div class="price">vanaf €200</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="container">
+    <h2>Reviews</h2>
+    <p class="lead">Echte ervaringen van klanten.</p>
+
+    <div class="grid" id="reviewGrid">
+      <div class="card">
+        <div class="stars">★★★★★</div>
+        <p>“Sterk gevoel voor branding en design.”</p>
+      </div>
+      <div class="card">
+        <div class="stars">★★★★★</div>
+        <p>“Professioneel, snel en creatief.”</p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:60px">
+      <h3>Laat een review achter</h3>
+      <input id="rName" placeholder="Naam">
+      <textarea id="rText" placeholder="Jouw ervaring"></textarea>
+      <button class="btn primary" onclick="addReview()">Review verzenden</button>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2>Contact</h2>
+    <p class="lead">
+      Klaar om samen te werken? Neem vrijblijvend contact op.
+    </p>
+
+    <div class="card">
+      <p><strong>Instagram:</strong> @vormiq.nl</p>
+      <p><strong>Contact:</strong> via WhatsApp</p>
+    </div>
+  </div>
 </section>
 
 <footer>
-  © 2025 VORMIQ — Premium Ontwerpbureau
+  © 2025 VORMIQ — Eenmanszaak • Actief sinds 2016
 </footer>
 
-<a class="whatsapp" href="https://wa.me/31600000000" target="_blank">WhatsApp</a>
+<a class="whatsapp" href="https://wa.me/31617177307" target="_blank">💬 WhatsApp</a>
 
 <script>
-function addReview() {
-  const text = document.getElementById('reviewText').value;
-  const author = document.getElementById('reviewAuthor').value;
-  if(!text || !author) return;
+function addReview(){
+  const name=document.getElementById('rName').value;
+  const text=document.getElementById('rText').value;
+  if(!name||!text)return;
 
-  const div = document.createElement('div');
-  div.className = 'card';
-  div.innerHTML = `
-    <div class="stars">★★★★★</div>
-    <blockquote>${text}</blockquote>
-    <div class="author">— ${author}</div>
-  `;
-  document.getElementById('reviews').appendChild(div);
+  const div=document.createElement('div');
+  div.className='card';
+  div.innerHTML='<div class="stars">★★★★★</div><p>'+text+'</p>';
+  document.getElementById('reviewGrid').appendChild(div);
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"CreativeAgency",
+  "name":"VORMIQ",
+  "url":"https://vormiq.nl",
+  "foundingDate":"2016",
+  "sameAs":["https://www.instagram.com/vormiq.nl"]
 }
 </script>
 
 </body>
-  </html>
+</html>
