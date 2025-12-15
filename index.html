@@ -4,129 +4,154 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VORMIQ — Premium Ontwerpbureau</title>
+  <meta name="description" content="VORMIQ is een creatief ontwerpbureau voor branding, logo design, websites en digitale creatie. Vorm + IQ.">
 
   <style>
-    /* RESET */
+    :root {
+      --bg: #080a0f;
+      --panel: #0f121a;
+      --fg: #f5f7fb;
+      --muted: #9aa0ad;
+      --accent: #3b82f6;
+      --radius: 20px;
+    }
+
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #0b0d10;
-      color: #f4f6f8;
+      background:
+        radial-gradient(1000px 500px at 80% -10%, rgba(59,130,246,0.2), transparent 60%),
+        var(--bg);
+      color: var(--fg);
       line-height: 1.6;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    a { color: inherit; text-decoration: none; }
 
-    /* LAYOUT */
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 80px 24px;
-    }
-
-    /* NAV */
+    /* NAVIGATION */
     nav {
       position: sticky;
       top: 0;
-      background: #0b0d10;
-      border-bottom: 1px solid #1f2933;
+      z-index: 10;
+      backdrop-filter: blur(14px);
+      background: rgba(8,10,15,0.75);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
     }
 
-    nav .nav-inner {
-      max-width: 1200px;
+    .nav-inner {
+      max-width: 1240px;
       margin: auto;
-      padding: 20px 24px;
+      padding: 18px 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
-    .logo {
-      font-weight: 900;
-      letter-spacing: 0.15em;
+    .logo img {
+      height: 36px;
+      display: block;
     }
 
-    .nav-btn {
-      background: #3b82f6;
-      padding: 10px 18px;
+    .nav-cta {
+      background: var(--accent);
+      padding: 10px 22px;
       border-radius: 999px;
       font-weight: 600;
+      transition: transform .25s ease;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-1px);
     }
 
     /* HERO */
+    .container {
+      max-width: 1240px;
+      margin: auto;
+      padding: 140px 24px;
+    }
+
     .hero h1 {
-      font-size: 64px;
-      line-height: 1.1;
-      margin-bottom: 24px;
+      font-size: clamp(44px, 6vw, 84px);
+      line-height: 1.05;
+      letter-spacing: -0.035em;
+      font-weight: 900;
+      margin-bottom: 32px;
     }
 
     .hero h1 span {
-      color: #3b82f6;
+      color: var(--accent);
     }
 
     .hero p {
-      max-width: 600px;
+      max-width: 640px;
       font-size: 18px;
-      color: #a1a6b3;
-      margin-bottom: 40px;
+      color: var(--muted);
+      margin-bottom: 52px;
     }
 
     .buttons {
       display: flex;
-      gap: 16px;
+      gap: 18px;
       flex-wrap: wrap;
     }
 
     .btn {
-      padding: 14px 26px;
+      padding: 16px 34px;
       border-radius: 999px;
       font-weight: 600;
-      border: 1px solid #374151;
+      border: 1px solid rgba(255,255,255,0.18);
     }
 
     .btn.primary {
-      background: #3b82f6;
+      background: var(--accent);
       border: none;
     }
 
     /* SECTIONS */
     section h2 {
-      font-size: 36px;
-      margin-bottom: 16px;
+      font-size: 38px;
+      font-weight: 800;
+      margin-bottom: 20px;
     }
 
     section .lead {
-      max-width: 600px;
-      color: #a1a6b3;
-      margin-bottom: 48px;
+      max-width: 620px;
+      color: var(--muted);
+      margin-bottom: 72px;
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 32px;
+      gap: 36px;
     }
 
     .card {
-      border: 1px solid #1f2933;
-      border-radius: 16px;
-      padding: 32px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0));
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 40px;
+      border-radius: var(--radius);
+      transition: transform .4s ease, border-color .4s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(59,130,246,0.7);
     }
 
     .card h3 {
-      margin-bottom: 12px;
+      margin-bottom: 14px;
+      font-size: 20px;
     }
 
     .card p {
-      color: #a1a6b3;
+      color: var(--muted);
     }
 
     /* TESTIMONIALS */
@@ -135,30 +160,31 @@
     }
 
     .author {
-      margin-top: 16px;
+      margin-top: 20px;
       font-size: 14px;
-      color: #9ca3af;
+      color: var(--muted);
     }
 
     /* FOOTER */
     footer {
-      border-top: 1px solid #1f2933;
-      padding: 60px 24px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 90px 24px;
       text-align: center;
-      color: #9ca3af;
       font-size: 14px;
+      color: var(--muted);
     }
 
     /* WHATSAPP */
     .whatsapp {
       position: fixed;
-      bottom: 24px;
       right: 24px;
+      bottom: 24px;
       background: #22c55e;
-      color: white;
-      padding: 14px 20px;
+      color: #fff;
+      padding: 14px 24px;
       border-radius: 999px;
       font-weight: 600;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.5);
     }
   </style>
 </head>
@@ -167,16 +193,18 @@
 
 <nav>
   <div class="nav-inner">
-    <div class="logo">VORMIQ</div>
-    <a href="#contact" class="nav-btn">Start project</a>
+    <div class="logo">
+      <img src="vormiqlogo.png" alt="VORMIQ logo">
+    </div>
+    <a href="#contact" class="nav-cta">Start project</a>
   </div>
 </nav>
 
 <div class="container hero">
-  <h1>Creatieve intelligentie<br><span>voor sterke merken</span></h1>
+  <h1>Creatieve intelligentie<br><span>voor merken met lef</span></h1>
   <p>
-    VORMIQ is een premium ontwerpbureau voor logo’s, branding, websites en digitale creatie.
-    Wij combineren strategie, vorm en intelligentie.
+    VORMIQ is een premium ontwerpbureau gespecialiseerd in branding,
+    logo design, websites en digitale creatie. Vorm + IQ.
   </p>
   <div class="buttons">
     <a href="#contact" class="btn primary">Project starten</a>
@@ -187,25 +215,25 @@
 <section id="diensten" class="container">
   <h2>Diensten</h2>
   <p class="lead">
-    Wij ontwerpen alles wat een merk nodig heeft om professioneel en herkenbaar te zijn.
+    Wij bouwen visuele identiteiten en digitale producten voor bedrijven die kwaliteit eisen.
   </p>
 
   <div class="grid">
     <div class="card">
-      <h3>Logo & Branding</h3>
-      <p>Unieke visuele identiteiten met een strategische basis.</p>
+      <h3>Branding & Logo</h3>
+      <p>Unieke identiteiten met een strategische en visuele kern.</p>
     </div>
     <div class="card">
-      <h3>Webdesign</h3>
-      <p>Snelle, moderne websites die vertrouwen uitstralen.</p>
+      <h3>Webdesign & Development</h3>
+      <p>Premium websites die vertrouwen uitstralen en converteren.</p>
     </div>
     <div class="card">
       <h3>Video & Motion</h3>
-      <p>Strakke edits en animaties voor online impact.</p>
+      <p>Doordachte animaties en edits voor maximale impact.</p>
     </div>
     <div class="card">
-      <h3>Print & Social</h3>
-      <p>Flyers, posters en content in één sterke lijn.</p>
+      <h3>Print & Content</h3>
+      <p>Social media, flyers en drukwerk in één krachtige stijl.</p>
     </div>
   </div>
 </section>
@@ -215,23 +243,15 @@
 
   <div class="grid">
     <div class="card">
-      <blockquote>
-        “VORMIQ denkt verder dan alleen design. Alles klopt.”
-      </blockquote>
+      <blockquote>“VORMIQ levert design met visie. Elk detail klopt.”</blockquote>
+      <div class="author">— Creative director</div>
+    </div>
+    <div class="card">
+      <blockquote>“Onze uitstraling is eindelijk premium en professioneel.”</blockquote>
       <div class="author">— Ondernemer</div>
     </div>
-
     <div class="card">
-      <blockquote>
-        “Onze website voelt eindelijk premium.”
-      </blockquote>
-      <div class="author">— Startup founder</div>
-    </div>
-
-    <div class="card">
-      <blockquote>
-        “Professioneel, strak en duidelijk proces.”
-      </blockquote>
+      <blockquote>“Strak proces, sterk resultaat.”</blockquote>
       <div class="author">— Marketing manager</div>
     </div>
   </div>
@@ -240,12 +260,12 @@
 <section id="contact" class="container">
   <h2>Start een project</h2>
   <p class="lead">
-    Klaar om serieus te investeren in je merk? Neem contact op.
+    Klaar om te investeren in een sterk merk? Neem contact op en laten we kijken of we bij elkaar passen.
   </p>
 
   <div class="card">
     <p><strong>Email:</strong> contact@vormiq.nl</p>
-    <p><strong>WhatsApp:</strong> gebruik de knop rechtsonder</p>
+    <p><strong>WhatsApp:</strong> via de knop rechtsonder</p>
   </div>
 </section>
 
