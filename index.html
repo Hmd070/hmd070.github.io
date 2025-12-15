@@ -1,127 +1,112 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VORMIQ — Premium Ontwerpbureau</title>
-  <meta name="description" content="VORMIQ is een premium ontwerpbureau voor logo design, branding, websites en digitale creatie. Vorm + IQ." />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --bg: #0b0d10;
-      --panel: #12151b;
-      --fg: #f4f6f8;
-      --muted: #a1a6b3;
-      --accent: #3b82f6;
-      --radius: 16px;
+    /* RESET */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
-
-    * { box-sizing: border-box; }
 
     body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: radial-gradient(1200px 600px at 80% -10%, rgba(59,130,246,0.15), transparent 60%), var(--bg);
-      color: var(--fg);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0b0d10;
+      color: #f4f6f8;
       line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
     }
 
-    a { color: inherit; text-decoration: none; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
+    /* LAYOUT */
     .container {
-      max-width: 1240px;
+      max-width: 1200px;
       margin: auto;
-      padding: 0 24px;
+      padding: 80px 24px;
     }
 
+    /* NAV */
     nav {
       position: sticky;
       top: 0;
-      backdrop-filter: blur(10px);
-      background: rgba(11,13,16,0.75);
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-      z-index: 10;
+      background: #0b0d10;
+      border-bottom: 1px solid #1f2933;
     }
 
-    nav .inner {
+    nav .nav-inner {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 72px;
     }
 
-    nav .logo {
+    .logo {
       font-weight: 900;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.15em;
     }
 
-    nav a.cta {
+    .nav-btn {
+      background: #3b82f6;
       padding: 10px 18px;
-      background: var(--accent);
       border-radius: 999px;
       font-weight: 600;
     }
 
-    header {
-      padding: 140px 0 120px;
+    /* HERO */
+    .hero h1 {
+      font-size: 64px;
+      line-height: 1.1;
+      margin-bottom: 24px;
     }
 
-    header h1 {
-      font-size: clamp(42px, 6vw, 84px);
-      line-height: 1.05;
-      margin: 0;
-      font-weight: 900;
-      letter-spacing: -0.03em;
+    .hero h1 span {
+      color: #3b82f6;
     }
 
-    header h1 span {
-      color: var(--accent);
-    }
-
-    header p {
-      max-width: 640px;
-      margin: 32px 0 48px;
+    .hero p {
+      max-width: 600px;
       font-size: 18px;
-      color: var(--muted);
+      color: #a1a6b3;
+      margin-bottom: 40px;
     }
 
-    .actions {
+    .buttons {
       display: flex;
       gap: 16px;
       flex-wrap: wrap;
     }
 
     .btn {
-      padding: 16px 28px;
+      padding: 14px 26px;
       border-radius: 999px;
       font-weight: 600;
-      border: 1px solid transparent;
+      border: 1px solid #374151;
     }
 
     .btn.primary {
-      background: var(--accent);
+      background: #3b82f6;
+      border: none;
     }
 
-    .btn.secondary {
-      border-color: rgba(255,255,255,0.15);
-    }
-
-    section {
-      padding: 120px 0;
-    }
-
+    /* SECTIONS */
     section h2 {
       font-size: 36px;
-      margin-bottom: 24px;
-      font-weight: 800;
+      margin-bottom: 16px;
     }
 
-    section p.lead {
-      max-width: 620px;
-      color: var(--muted);
-      margin-bottom: 64px;
+    section .lead {
+      max-width: 600px;
+      color: #a1a6b3;
+      margin-bottom: 48px;
     }
 
     .grid {
@@ -131,58 +116,144 @@
     }
 
     .card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0));
-      border: 1px solid rgba(255,255,255,0.08);
-      padding: 36px;
-      border-radius: var(--radius);
-      transition: transform .3s ease, border-color .3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(59,130,246,0.6);
+      border: 1px solid #1f2933;
+      border-radius: 16px;
+      padding: 32px;
     }
 
     .card h3 {
-      margin-top: 0;
+      margin-bottom: 12px;
     }
 
     .card p {
-      color: var(--muted);
+      color: #a1a6b3;
     }
 
+    /* TESTIMONIALS */
     blockquote {
-      margin: 0;
       font-size: 17px;
     }
 
     .author {
-      margin-top: 20px;
+      margin-top: 16px;
       font-size: 14px;
-      color: var(--muted);
+      color: #9ca3af;
     }
 
+    /* FOOTER */
     footer {
-      padding: 80px 0;
-      border-top: 1px solid rgba(255,255,255,0.06);
-      color: var(--muted);
+      border-top: 1px solid #1f2933;
+      padding: 60px 24px;
+      text-align: center;
+      color: #9ca3af;
       font-size: 14px;
     }
 
+    /* WHATSAPP */
     .whatsapp {
       position: fixed;
-      right: 24px;
       bottom: 24px;
-      padding: 16px 22px;
+      right: 24px;
       background: #22c55e;
+      color: white;
+      padding: 14px 20px;
       border-radius: 999px;
       font-weight: 600;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-      z-index: 20;
     }
   </style>
 </head>
 
 <body>
 
-<nav
+<nav>
+  <div class="nav-inner">
+    <div class="logo">VORMIQ</div>
+    <a href="#contact" class="nav-btn">Start project</a>
+  </div>
+</nav>
+
+<div class="container hero">
+  <h1>Creatieve intelligentie<br><span>voor sterke merken</span></h1>
+  <p>
+    VORMIQ is een premium ontwerpbureau voor logo’s, branding, websites en digitale creatie.
+    Wij combineren strategie, vorm en intelligentie.
+  </p>
+  <div class="buttons">
+    <a href="#contact" class="btn primary">Project starten</a>
+    <a href="#diensten" class="btn">Onze diensten</a>
+  </div>
+</div>
+
+<section id="diensten" class="container">
+  <h2>Diensten</h2>
+  <p class="lead">
+    Wij ontwerpen alles wat een merk nodig heeft om professioneel en herkenbaar te zijn.
+  </p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Logo & Branding</h3>
+      <p>Unieke visuele identiteiten met een strategische basis.</p>
+    </div>
+    <div class="card">
+      <h3>Webdesign</h3>
+      <p>Snelle, moderne websites die vertrouwen uitstralen.</p>
+    </div>
+    <div class="card">
+      <h3>Video & Motion</h3>
+      <p>Strakke edits en animaties voor online impact.</p>
+    </div>
+    <div class="card">
+      <h3>Print & Social</h3>
+      <p>Flyers, posters en content in één sterke lijn.</p>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <h2>Wat klanten zeggen</h2>
+
+  <div class="grid">
+    <div class="card">
+      <blockquote>
+        “VORMIQ denkt verder dan alleen design. Alles klopt.”
+      </blockquote>
+      <div class="author">— Ondernemer</div>
+    </div>
+
+    <div class="card">
+      <blockquote>
+        “Onze website voelt eindelijk premium.”
+      </blockquote>
+      <div class="author">— Startup founder</div>
+    </div>
+
+    <div class="card">
+      <blockquote>
+        “Professioneel, strak en duidelijk proces.”
+      </blockquote>
+      <div class="author">— Marketing manager</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="container">
+  <h2>Start een project</h2>
+  <p class="lead">
+    Klaar om serieus te investeren in je merk? Neem contact op.
+  </p>
+
+  <div class="card">
+    <p><strong>Email:</strong> contact@vormiq.nl</p>
+    <p><strong>WhatsApp:</strong> gebruik de knop rechtsonder</p>
+  </div>
+</section>
+
+<footer>
+  © 2025 VORMIQ — Premium Ontwerpbureau
+</footer>
+
+<a class="whatsapp" href="https://wa.me/31600000000" target="_blank">WhatsApp</a>
+
+</body>
+</html>
