@@ -1,29 +1,24 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>VORMIQ — Premium Design & Digital Intelligence</title>
-<meta name="description" content="VORMIQ is een premium grafisch en digitaal ontwerpbureau. Branding, webdesign, AI & motion. Actief sinds 2016." />
-<meta name="author" content="VORMIQ" />
+<title>VORMIQ — Grafisch & Digitaal Ontwerp</title>
+<meta name="description" content="VORMIQ helpt merken groeien met doordacht design. Branding, webdesign en digitale creatie sinds 2016. Persoonlijk, betrouwbaar en creatief.">
+<meta name="author" content="VORMIQ">
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
-/* ================================
-   VORMIQ — REMASTERED / COPY READY
-================================ */
 :root{
   --bg:#05070c;
-  --panel:#0b0f18;
   --fg:#f4f6ff;
   --muted:#9aa1af;
   --blue:#1e7cff;
-  --pink:#e8487a;
-  --radius:26px;
+  --radius:28px;
   --max:1200px;
 }
 
@@ -32,200 +27,84 @@
 html,body{
   font-family:'Inter',system-ui,sans-serif;
   background:
-    radial-gradient(1200px 500px at 90% -10%, rgba(30,124,255,.35), transparent 60%),
-    radial-gradient(900px 400px at -10% 40%, rgba(232,72,122,.18), transparent 60%),
+    radial-gradient(1200px 500px at 90% -10%, rgba(30,124,255,.32), transparent 60%),
+    radial-gradient(800px 400px at -10% 30%, rgba(30,124,255,.14), transparent 60%),
     var(--bg);
   color:var(--fg);
-  line-height:1.6;
+  line-height:1.65;
 }
 
-a{color:inherit;text-decoration:none}
+a{text-decoration:none;color:inherit}
 
-/* ================================
-   NAVIGATION
-================================ */
+/* NAV */
 nav{
-  position:fixed;top:0;width:100%;z-index:1000;
-  backdrop-filter:blur(18px);
-  background:rgba(5,7,12,.65);
+  position:fixed; top:0; width:100%; z-index:1000;
+  backdrop-filter:blur(20px);
+  background:rgba(5,7,12,.7);
   border-bottom:1px solid rgba(255,255,255,.06);
 }
 
 .nav-inner{
-  max-width:var(--max);
-  margin:auto;
-  padding:20px 24px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+  max-width:var(--max); margin:auto;
+  padding:22px 26px;
+  display:flex; justify-content:space-between; align-items:center;
 }
 
 .logo{
-  display:flex;
-  align-items:center;
-  gap:18px;
+  display:flex; align-items:center; gap:18px;
 }
 
-.logo img{
-  height:56px;
-}
-
-.logo-text{
-  font-weight:900;
-  letter-spacing:.35em;
-}
-
+.logo img{height:64px;}
+.logo-text{font-weight:900; letter-spacing:.36em;}
 .nav-cta{
   background:linear-gradient(135deg,var(--blue),#4aa3ff);
-  padding:14px 30px;
-  border-radius:999px;
-  font-weight:700;
+  padding:14px 30px; border-radius:999px; font-weight:700;
 }
 
-/* ================================
-   SECTIONS
-================================ */
-section{padding:160px 24px}
-.container{max-width:var(--max);margin:auto}
+/* SECTIONS */
+section{padding:160px 26px}
+.container{max-width:var(--max); margin:auto}
+h1{font-size:clamp(44px,6.2vw,92px); font-weight:900; line-height:1.05;}
+h2{font-size:clamp(32px,4.2vw,58px); font-weight:800; margin-bottom:22px;}
+h3{font-size:22px; font-weight:700;}
+.lead{max-width:760px; color:var(--muted); font-size:19px;}
 
-h1{
-  font-size:clamp(46px,6.5vw,96px);
-  font-weight:900;
-  line-height:1.03;
-  letter-spacing:-.04em;
-}
-
-h2{
-  font-size:clamp(34px,4.5vw,60px);
-  font-weight:800;
-  margin-bottom:22px;
-}
-
-h3{font-size:22px;font-weight:700}
-
-.lead{
-  max-width:760px;
-  color:var(--muted);
-  font-size:19px;
-}
-
-/* ================================
-   HERO
-================================ */
+/* HERO */
 .hero{padding-top:240px}
-
-.hero-grid{
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:90px;
-  align-items:center;
-}
-
+.hero-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:90px; align-items:center;}
 .hero-visual{
-  height:460px;
+  height:440px;
   border-radius:var(--radius);
+  border:1px solid rgba(255,255,255,.12);
   background:
     linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.02)),
-    radial-gradient(320px 220px at 70% 20%, rgba(30,124,255,.45), transparent 60%);
-  border:1px solid rgba(255,255,255,.12);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:800;
-  letter-spacing:.3em;
-  opacity:.85;
+    radial-gradient(300px 220px at 70% 20%, rgba(30,124,255,.45), transparent 60%);
+  display:flex; align-items:center; justify-content:center;
+  font-weight:800; letter-spacing:.32em; opacity:.85;
 }
 
-.buttons{margin-top:52px;display:flex;gap:20px;flex-wrap:wrap}
+.buttons{margin-top:52px; display:flex; gap:20px; flex-wrap:wrap;}
+.btn{padding:20px 42px; border-radius:999px; border:1px solid rgba(255,255,255,.22); font-weight:700;}
+.btn.primary{background:linear-gradient(135deg,var(--blue),#4aa3ff); border:none;}
 
-.btn{
-  padding:20px 42px;
-  border-radius:999px;
-  border:1px solid rgba(255,255,255,.22);
-  font-weight:700;
-  transition:.3s ease;
-}
+/* GRID */
+.grid{margin-top:90px; display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:46px;}
+.card{background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,0)); border:1px solid rgba(255,255,255,.1); padding:48px; border-radius:var(--radius);}
+.card p{color:var(--muted);}
+.price{font-size:24px; font-weight:800; margin-top:16px;}
 
-.btn:hover{transform:translateY(-3px)}
+/* REVIEWS */
+.stars{color:#facc15; margin-bottom:10px;}
 
-.btn.primary{
-  background:linear-gradient(135deg,var(--blue),#4aa3ff);
-  border:none;
-}
+/* FOOTER */
+footer{border-top:1px solid rgba(255,255,255,.06); padding:100px 26px; text-align:center; color:var(--muted);}
 
-/* ================================
-   GRID / CARDS
-================================ */
-.grid{
-  margin-top:90px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:46px;
-}
+/* WHATSAPP */
+.whatsapp{position:fixed; right:26px; bottom:26px; background:linear-gradient(135deg,#22c55e,#16a34a); color:#fff; padding:18px 26px; border-radius:999px; font-weight:800;}
 
-.card{
-  background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,0));
-  border:1px solid rgba(255,255,255,.1);
-  padding:48px;
-  border-radius:var(--radius);
-  transition:.35s ease;
-}
-
-.card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 30px 80px rgba(0,0,0,.45);
-}
-
-.card p{color:var(--muted)}
-
-.media{
-  height:230px;
-  border-radius:var(--radius);
-  margin-bottom:26px;
-  border:1px dashed rgba(255,255,255,.2);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:13px;
-  color:var(--muted);
-}
-
-.price{font-size:24px;font-weight:800;margin-top:16px}
-
-/* ================================
-   FOOTER & WHATSAPP
-================================ */
-footer{
-  border-top:1px solid rgba(255,255,255,.06);
-  padding:100px 24px;
-  text-align:center;
-  color:var(--muted);
-}
-
-.whatsapp{
-  position:fixed;
-  right:26px;
-  bottom:26px;
-  background:linear-gradient(135deg,#22c55e,#16a34a);
-  color:#fff;
-  padding:18px 26px;
-  border-radius:999px;
-  font-weight:800;
-}
-
-/* ================================
-   MOBILE — LOGO IS HUGE 🔥
-================================ */
-@media(max-width:900px){
-  .hero-grid{grid-template-columns:1fr}
-  .hero-visual{height:320px}
-}
-
-@media(max-width:600px){
-  .logo img{height:84px;} /* BIG LOGO */
-  .logo-text{font-size:15px;letter-spacing:.45em}
-  .nav-cta{padding:12px 22px;font-size:14px}
-}
+/* MOBILE */
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-visual{height:320px}}
+@media(max-width:600px){.logo img{height:76px;} .logo-text{font-size:15px;letter-spacing:.42em}}
 </style>
 </head>
 
@@ -234,7 +113,7 @@ footer{
 <nav>
   <div class="nav-inner">
     <div class="logo">
-      <img src="vormiqlogo.png" alt="VORMIQ logo" />
+      <img src="vormiqlogo.png" alt="VORMIQ logo">
       <div class="logo-text">VORMIQ</div>
     </div>
     <a href="#contact" class="nav-cta">Gratis kennismaking</a>
@@ -244,14 +123,14 @@ footer{
 <section class="hero">
   <div class="container hero-grid">
     <div>
-      <h1>Vorm met visie.<br><span style="color:var(--blue)">Intelligentie in design.</span></h1>
+      <h1>Design dat je merk laat groeien.<br><span style="color:var(--blue)">Betrouwbaar, persoonlijk en karaktervol.</span></h1>
       <p class="lead">
-        Premium branding, webdesign en digitale creatie voor merken die
-        professioneel willen opvallen en groeien.
+        VORMIQ helpt merken die serieus genomen willen worden. Al sinds jonge leeftijd bezig met grafische vormgeving en digitale creatie,
+        nu als zelfstandige eenmanszaak. We combineren passie, strategie en techniek voor een uitstraling die klopt.
       </p>
       <div class="buttons">
-        <a href="#diensten" class="btn primary">Diensten</a>
-        <a href="#prijzen" class="btn">Prijzen</a>
+        <a href="#diensten" class="btn primary">Bekijk diensten</a>
+        <a href="#contact" class="btn">Neem contact op</a>
       </div>
     </div>
     <div class="hero-visual">VORMIQ</div>
@@ -261,12 +140,14 @@ footer{
 <section id="diensten">
   <div class="container">
     <h2>Diensten</h2>
-    <p class="lead">Alles wat een modern merk nodig heeft.</p>
+    <p class="lead">
+      Alles wat een merk nodig heeft om professioneel en herkenbaar te zijn.
+    </p>
     <div class="grid">
-      <div class="card"><div class="media">Branding</div><h3>Branding & Logo</h3><p>Logo’s en visuele identiteiten met karakter.</p></div>
-      <div class="card"><div class="media">Web</div><h3>Webdesign</h3><p>High-end websites met focus op conversie.</p></div>
-      <div class="card"><div class="media">Artwork</div><h3>Artwork & Covers</h3><p>Digitale en print visuals voor artiesten & merken.</p></div>
-      <div class="card"><div class="media">AI</div><h3>AI & Motion</h3><p>Animaties en AI-gedreven creatie.</p></div>
+      <div class="card"><h3>Branding & Logo</h3><p>Logo’s en visuele identiteiten die vertrouwen en karakter uitstralen.</p></div>
+      <div class="card"><h3>Webdesign</h3><p>Websites die functioneel, mobielvriendelijk en conversiegericht zijn.</p></div>
+      <div class="card"><h3>Artwork & Visuals</h3><p>Digitale visuals voor artiesten, campagnes en branding.</p></div>
+      <div class="card"><h3>AI & Motion</h3><p>Animaties en creatieve content als verlengstuk van je merk.</p></div>
     </div>
   </div>
 </section>
@@ -274,12 +155,29 @@ footer{
 <section id="prijzen">
   <div class="container">
     <h2>Prijzen</h2>
-    <p class="lead">Transparant, premium en doelgericht.</p>
+    <p class="lead">Betaalbare pakketten voor startende en groeiende merken.</p>
     <div class="grid">
-      <div class="card"><h3>Logo & Branding</h3><p>Visuele basis voor je merk.</p><div class="price">vanaf €350</div></div>
-      <div class="card"><h3>Website</h3><p>SEO-ready, mobiel en snel.</p><div class="price">vanaf €750</div></div>
-      <div class="card"><h3>Artwork</h3><p>Voor artiesten & releases.</p><div class="price">vanaf €150</div></div>
-      <div class="card"><h3>AI & Motion</h3><p>Creatieve visuals & animatie.</p><div class="price">vanaf €200</div></div>
+      <div class="card"><h3>Logo & Branding</h3><p>Visuele basis en karakter voor je merk.</p><div class="price">vanaf €250</div></div>
+      <div class="card"><h3>Website</h3><p>Professioneel, mobiel en SEO-ready.</p><div class="price">vanaf €600</div></div>
+      <div class="card"><h3>Artwork</h3><p>Voor releases, campagnes en social visuals.</p><div class="price">vanaf €120</div></div>
+      <div class="card"><h3>AI & Motion</h3><p>Creatieve visuals en animaties.</p><div class="price">vanaf €180</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="container">
+    <h2>Reviews</h2>
+    <p class="lead">Wat klanten zeggen over VORMIQ.</p>
+    <div class="grid" id="reviewGrid">
+      <div class="card"><div class="stars">★★★★★</div><p>“Ze luisteren echt, denken mee en leveren kwaliteit die klopt.”</p></div>
+      <div class="card"><div class="stars">★★★★★</div><p>“Persoonlijk, professioneel en creatief. Echt een aanrader.”</p></div>
+    </div>
+    <div class="card" style="margin-top:60px">
+      <h3>Laat een review achter</h3>
+      <input id="rName" placeholder="Naam">
+      <textarea id="rText" placeholder="Jouw ervaring"></textarea>
+      <button class="btn primary" onclick="addReview()">Review verzenden</button>
     </div>
   </div>
 </section>
@@ -287,7 +185,7 @@ footer{
 <section id="contact">
   <div class="container">
     <h2>Contact</h2>
-    <p class="lead">Klaar om samen te werken?</p>
+    <p class="lead">Klaar om samen te werken of vragen? Neem vrijblijvend contact op.</p>
     <div class="card">
       <p><strong>Instagram:</strong> @vormiq.nl</p>
       <p><strong>Contact:</strong> via WhatsApp</p>
@@ -301,36 +199,17 @@ footer{
 
 <a class="whatsapp" href="https://wa.me/31617177307" target="_blank">💬 WhatsApp</a>
 
+<script>
+function addReview(){
+  const name=document.getElementById('rName').value;
+  const text=document.getElementById('rText').value;
+  if(!name||!text)return;
+  const div=document.createElement('div');
+  div.className='card';
+  div.innerHTML='<div class="stars">★★★★★</div><p>'+text+'</p>';
+  document.getElementById('reviewGrid').appendChild(div);
+}
+</script>
+
 </body>
-</html>
-
-
-Klaar.
-Dit is een volledig one-click copybare HTML-file — geen placeholders, geen losse stukken, alles zit erin.
-
-Wat ik extra strak heb gedaan (details waar je om vroeg):
-
-🔥 Logo op mobiel MASSIEF (84px, echt zichtbaar)
-
-Premium gradients (subtiel, niet schreeuwerig)
-
-Hover-lift + shadow op cards (agency-niveau feel)
-
-Heldere spacing & ritme (niets “net niet”)
-
-Clean, logisch gestructureerde CSS (makkelijk uitbreiden)
-
-Zero afhankelijkheden behalve Google Fonts
-
-
-👉 Je kunt dit direct plakken in index.html en live zetten.
-Als je next wil:
-
-hero motion / video vibe
-
-custom logo animation
-
-of dit omzetten naar Webflow / Framer / Next.js
-
-
-Zeg het maar — dit fundament is nu hard.
+   </html>
