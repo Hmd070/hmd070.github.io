@@ -3,15 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>VORMIQ — Grafisch & Digitaal Ontwerp</title>
 <meta name="description" content="VORMIQ helpt merken groeien met doordacht design. Branding, webdesign en digitale creatie sinds 2016. Persoonlijk, betrouwbaar en creatief.">
 <meta name="author" content="VORMIQ">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
 <style>
 :root{
   --bg:#05070c;
@@ -21,80 +18,74 @@
   --radius:28px;
   --max:1200px;
 }
-
-*{margin:0;padding:0;box-sizing:border-box}
-
-html,body{
-  font-family:'Inter',system-ui,sans-serif;
-  background:
-    radial-gradient(1200px 500px at 90% -10%, rgba(30,124,255,.32), transparent 60%),
-    radial-gradient(800px 400px at -10% 30%, rgba(30,124,255,.14), transparent 60%),
-    var(--bg);
-  color:var(--fg);
-  line-height:1.65;
-}
-
-a{text-decoration:none;color:inherit}
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{font-family:'Inter',system-ui,sans-serif;background:radial-gradient(1200px 500px at 90% -10%, rgba(30,124,255,.32), transparent 60%), radial-gradient(800px 400px at -10% 30%, rgba(30,124,255,.14), transparent 60%), var(--bg);color:var(--fg);line-height:1.65;}
+a{text-decoration:none;color:inherit;}
 
 /* NAV */
-nav{
-  position:fixed; top:0; width:100%; z-index:1000;
-  backdrop-filter:blur(20px);
-  background:rgba(5,7,12,.7);
-  border-bottom:1px solid rgba(255,255,255,.06);
-}
-
-.nav-inner{
-  max-width:var(--max); margin:auto;
-  padding:22px 26px;
-  display:flex; justify-content:space-between; align-items:center;
-}
-
-.logo{
-  display:flex; align-items:center; gap:18px;
-}
-
+nav{position:fixed; top:0; width:100%; z-index:1000; backdrop-filter:blur(20px); background:rgba(5,7,12,.7); border-bottom:1px solid rgba(255,255,255,.06);}
+.nav-inner{max-width:var(--max); margin:auto; padding:22px 26px; display:flex; justify-content:space-between; align-items:center;}
+.logo{display:flex; align-items:center; gap:18px;}
 .logo img{height:64px;}
 .logo-text{font-weight:900; letter-spacing:.36em;}
-.nav-cta{
-  background:linear-gradient(135deg,var(--blue),#4aa3ff);
-  padding:14px 30px; border-radius:999px; font-weight:700;
-}
+.nav-cta{background:linear-gradient(135deg,var(--blue),#4aa3ff); padding:14px 30px; border-radius:999px; font-weight:700;}
 
 /* SECTIONS */
-section{padding:160px 26px}
-.container{max-width:var(--max); margin:auto}
+section{padding:160px 26px;}
+.container{max-width:var(--max); margin:auto;}
 h1{font-size:clamp(44px,6.2vw,92px); font-weight:900; line-height:1.05;}
 h2{font-size:clamp(32px,4.2vw,58px); font-weight:800; margin-bottom:22px;}
 h3{font-size:22px; font-weight:700;}
 .lead{max-width:760px; color:var(--muted); font-size:19px;}
 
 /* HERO */
-.hero{padding-top:240px}
+.hero{padding-top:240px;}
 .hero-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:90px; align-items:center;}
-.hero-visual{
-  height:440px;
-  border-radius:var(--radius);
-  border:1px solid rgba(255,255,255,.12);
-  background:
-    linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.02)),
-    radial-gradient(300px 220px at 70% 20%, rgba(30,124,255,.45), transparent 60%);
-  display:flex; align-items:center; justify-content:center;
-  font-weight:800; letter-spacing:.32em; opacity:.85;
-}
-
+.hero-visual{height:440px; border-radius:var(--radius); border:1px solid rgba(255,255,255,.12); background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.02)), radial-gradient(300px 220px at 70% 20%, rgba(30,124,255,.45), transparent 60%); display:flex; align-items:center; justify-content:center; font-weight:800; letter-spacing:.32em; opacity:.85;}
 .buttons{margin-top:52px; display:flex; gap:20px; flex-wrap:wrap;}
-.btn{padding:20px 42px; border-radius:999px; border:1px solid rgba(255,255,255,.22); font-weight:700;}
-.btn.primary{background:linear-gradient(135deg,var(--blue),#4aa3ff); border:none;}
+.btn{padding:20px 42px; border-radius:999px; border:1px solid rgba(255,255,255,.22); font-weight:700; transition:all 0.3s ease;}
+.btn.primary{background:linear-gradient(135deg,var(--blue),#4aa3ff); border:none; color:#fff;}
+.btn:hover{transform:translateY(-3px)}
 
-/* GRID */
+/* GRID (Diensten/Reviews) */
 .grid{margin-top:90px; display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:46px;}
 .card{background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,0)); border:1px solid rgba(255,255,255,.1); padding:48px; border-radius:var(--radius);}
 .card p{color:var(--muted);}
 .price{font-size:24px; font-weight:800; margin-top:16px;}
 
+/* PORTFOLIO */
+.portfolio-grid{margin-top:70px; display:grid; grid-template-columns:repeat(auto-fit,minmax(350px,1fr)); gap:40px;}
+.project-card{border-radius:var(--radius); overflow:hidden; border:1px solid rgba(255,255,255,.12); position:relative; transition:transform .3s ease, box-shadow .3s ease; background:var(--bg);}
+.project-card:hover{transform:translateY(-5px); box-shadow:0 15px 30px rgba(30,124,255,.25);}
+.project-card img{width:100%; height:280px; object-fit:cover; display:block;}
+.project-info{padding:30px 30px 40px;}
+.project-info h3{margin-bottom:8px; color:var(--blue); font-weight:800;}
+.project-info p{color:var(--muted); font-size:16px;}
+.tag{display:inline-block; font-size:12px; font-weight:600; padding:4px 10px; margin-right:8px; margin-top:10px; border-radius:4px; background:rgba(30,124,255,.15); color:var(--blue);}
+
+/* INSTAGRAM GRID */
+#instagram-section{padding:80px 26px; text-align:center; background:linear-gradient(135deg, rgba(30,124,255,.45), rgba(74,163,255,.2)); border-radius:28px; margin-bottom:50px;}
+#instagram-section h2{font-size:2.5rem; font-weight:800; color:#fff; margin-bottom:30px; text-shadow:2px 2px 15px rgba(0,0,0,0.4);}
+#instagram-section .elfsight-app-7b7fb468-08eb-4513-ae6c-f38cd6c653b1{border-radius:28px; overflow:hidden; box-shadow:0 15px 30px rgba(30,124,255,.25); transition: transform .3s ease, box-shadow .3s ease;}
+#instagram-section .elfsight-app-7b7fb468-08eb-4513-ae6c-f38cd6c653b1:hover{transform:translateY(-5px); box-shadow:0 25px 50px rgba(30,124,255,.35);}
+#instagram-section p{margin-top:15px; color:#f4f6ff;}
+
+/* PRIJZEN / PAKKETTEN */
+.pricing-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:40px; margin-top:50px;}
+.pricing-card{background:var(--bg); border:1px solid rgba(255,255,255,.12); border-radius:var(--radius); padding:40px 30px; text-align:center; transition:transform .3s ease, box-shadow .3s ease;}
+.pricing-card:hover{transform:translateY(-5px); box-shadow:0 15px 30px rgba(30,124,255,.25);}
+.pricing-card.popular{border:2px solid var(--blue);}
+.pricing-card h3{color:var(--blue); margin-bottom:15px;}
+.pricing-card ul{list-style:none; padding-left:0; text-align:left; margin-top:20px; margin-bottom:20px;}
+.pricing-card ul li{margin-bottom:10px;}
+.pricing-card .price{font-size:28px; font-weight:900; margin-bottom:20px;}
+.pricing-card .btn{width:100%; display:inline-block; margin-top:10px;}
+
 /* REVIEWS */
 .stars{color:#facc15; margin-bottom:10px;}
+
+/* CONTACT FORM */
+input,textarea{width:100%; padding:12px; margin-bottom:12px; border-radius:8px; border:1px solid rgba(255,255,255,.2); background:var(--bg); color:var(--fg);}
 
 /* FOOTER */
 footer{border-top:1px solid rgba(255,255,255,.06); padding:100px 26px; text-align:center; color:var(--muted);}
@@ -104,10 +95,10 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:100px 26px; text-alig
 
 /* MOBILE */
 @media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-visual{height:320px}}
+@media(max-width:768px){#instagram-section{padding:50px 20px;} #instagram-section h2{font-size:1.8rem;}}
 @media(max-width:600px){.logo img{height:76px;} .logo-text{font-size:15px;letter-spacing:.42em}}
 </style>
 </head>
-
 <body>
 
 <nav>
@@ -120,14 +111,12 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:100px 26px; text-alig
   </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <div class="container hero-grid">
     <div>
       <h1>Design dat je merk laat groeien.<br><span style="color:var(--blue)">Betrouwbaar, persoonlijk en karaktervol.</span></h1>
-      <p class="lead">
-        VORMIQ helpt merken die serieus genomen willen worden. Al sinds jonge leeftijd bezig met grafische vormgeving en digitale creatie,
-        nu als zelfstandige eenmanszaak. We combineren passie, strategie en techniek voor een uitstraling die klopt.
-      </p>
+      <p class="lead">VORMIQ helpt merken die serieus genomen willen worden. Al sinds jonge leeftijd bezig met grafische vormgeving en digitale creatie, nu als zelfstandige eenmanszaak. We combineren passie, strategie en techniek voor een uitstraling die klopt.</p>
       <div class="buttons">
         <a href="#diensten" class="btn primary">Bekijk diensten</a>
         <a href="#contact" class="btn">Neem contact op</a>
@@ -137,12 +126,11 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:100px 26px; text-alig
   </div>
 </section>
 
+<!-- DIENSTEN -->
 <section id="diensten">
   <div class="container">
     <h2>Diensten</h2>
-    <p class="lead">
-      Alles wat een merk nodig heeft om professioneel en herkenbaar te zijn.
-    </p>
+    <p class="lead">Alles wat een merk nodig heeft om professioneel en herkenbaar te zijn.</p>
     <div class="grid">
       <div class="card"><h3>Branding & Logo</h3><p>Logo’s en visuele identiteiten die vertrouwen en karakter uitstralen.</p></div>
       <div class="card"><h3>Webdesign</h3><p>Websites die functioneel, mobielvriendelijk en conversiegericht zijn.</p></div>
@@ -152,19 +140,109 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:100px 26px; text-alig
   </div>
 </section>
 
-<section id="prijzen">
+<!-- INSTAGRAM GRID -->
+<section id="instagram-section">
+  <h2>Onze Creatieve Instagram Feed</h2>
+  <script src="https://elfsightcdn.com/platform.js" async></script>
+  <div class="elfsight-app-7b7fb468-08eb-4513-ae6c-f38cd6c653b1" data-elfsight-app-lazy></div>
+  <p>Bekijk meer op <a href="https://instagram.com/jouwaccount" target="_blank">Instagram</a></p>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
   <div class="container">
-    <h2>Prijzen</h2>
-    <p class="lead">Betaalbare pakketten voor startende en groeiende merken.</p>
-    <div class="grid">
-      <div class="card"><h3>Logo & Branding</h3><p>Visuele basis en karakter voor je merk.</p><div class="price">vanaf €250</div></div>
-      <div class="card"><h3>Website</h3><p>Professioneel, mobiel en SEO-ready.</p><div class="price">vanaf €600</div></div>
-      <div class="card"><h3>Artwork</h3><p>Voor releases, campagnes en social visuals.</p><div class="price">vanaf €120</div></div>
-      <div class="card"><h3>AI & Motion</h3><p>Creatieve visuals en animaties.</p><div class="price">vanaf €180</div></div>
+    <h2>Ons Werk</h2>
+    <p class="lead">Een selectie van onze creatieve projecten. Van start-up branding tot digitale art voor artiesten.</p>
+    <div class="portfolio-grid">
+      <a href="#" class="project-card">
+        <img src="project-mockup-web.jpg" alt="Webdesign project voorbeeld">
+        <div class="project-info">
+          <h3>E-commerce Platform Redesign</h3>
+          <p>Complete rebranding en webdesign voor een fictieve fashion retailer. Nadruk op UX/UI en mobiele conversie.</p>
+          <div class="tags">
+            <span class="tag">Webdesign</span>
+            <span class="tag">UI/UX</span>
+            <span class="tag">Branding</span>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="project-card">
+        <img src="project-mockup-album.jpg" alt="Album Cover Design voorbeeld">
+        <div class="project-info">
+          <h3>Album Artwork: 'The Quantum Leap'</h3>
+          <p>Opvallende visuele identiteit voor een DJ/Producer. Inclusief logo variaties en social media assets.</p>
+          <div class="tags">
+            <span class="tag">Artwork</span>
+            <span class="tag">Branding</span>
+            <span class="tag">Visuals</span>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="project-card">
+        <img src="project-mockup-ai.jpg" alt="AI Concept Art voorbeeld">
+        <div class="project-info">
+          <h3>Concept Art met AI-Integratie</h3>
+          <p>Een reeks innovatieve beelden en motion graphics, snel gegenereerd en bewerkt met AI tools.</p>
+          <div class="tags">
+            <span class="tag">AI Design</span>
+            <span class="tag">Motion</span>
+            <span class="tag">Concept</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="buttons" style="text-align:center; margin-top:80px;">
+      <a href="#contact" class="btn primary">Start je project vandaag nog</a>
     </div>
   </div>
 </section>
 
+<!-- PRIJZEN / PAKKETTEN -->
+<section id="prijzen">
+  <div class="container">
+    <h2>Onze Pakketten</h2>
+    <p class="lead">Kies het pakket dat past bij jouw merk en budget. Van startende merken tot complete digitale creatie.</p>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3>Starter</h3>
+        <p>Ideaal voor nieuwe merken die een professionele basis willen.</p>
+        <ul>
+          <li>Logo & Visuele Identiteit</li>
+          <li>Kleurenpalet & Typografie</li>
+          <li>Basis branding guidelines</li>
+        </ul>
+        <div class="price">€250</div>
+        <a href="#contact" class="btn primary">Vraag offerte aan</a>
+      </div>
+      <div class="pricing-card popular">
+        <h3>Growth</h3>
+        <p>Voor merken die willen groeien met branding + website.</p>
+        <ul>
+          <li>Alles in Starter</li>
+          <li>Professionele Website (mobielvriendelijk, SEO-ready)</li>
+          <li>Social media templates</li>
+          <li>Branding integratie in alle assets</li>
+        </ul>
+        <div class="price">€750</div>
+        <a href="#contact" class="btn primary">Vraag offerte aan</a>
+      </div>
+      <div class="pricing-card">
+        <h3>Pro</h3>
+        <p>Complete digitale creatie, ideaal voor gevestigde merken of projecten.</p>
+        <ul>
+          <li>Alles in Growth</li>
+          <li>Artwork & Motion Graphics</li>
+          <li>AI Concept Art & Visuals</li>
+          <li>Campagne & Social media visuals</li>
+        </ul>
+        <div class="price">€1.250</div>
+        <a href="#contact" class="btn primary">Vraag offerte aan</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
 <section id="reviews">
   <div class="container">
     <h2>Reviews</h2>
@@ -182,34 +260,65 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:100px 26px; text-alig
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
   <div class="container">
     <h2>Contact</h2>
     <p class="lead">Klaar om samen te werken of vragen? Neem vrijblijvend contact op.</p>
     <div class="card">
       <p><strong>Instagram:</strong> @vormiq.nl</p>
-      <p><strong>Contact:</strong> via WhatsApp</p>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/31617177307" target="_blank">💬 WhatsApp</a></p>
+      <form id="contactForm">
+        <input type="text" id="cName" placeholder="Naam" required>
+        <input type="email" id="cEmail" placeholder="E-mail" required>
+        <textarea id="cMessage" placeholder="Bericht" required></textarea>
+        <button type="submit" class="btn primary">Verstuur</button>
+      </form>
     </div>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
   © 2025 VORMIQ — Actief sinds 2016
 </footer>
 
+<!-- WHATSAPP -->
 <a class="whatsapp" href="https://wa.me/31617177307" target="_blank">💬 WhatsApp</a>
 
+<!-- SCRIPTS -->
 <script>
-function addReview(){
-  const name=document.getElementById('rName').value;
-  const text=document.getElementById('rText').value;
-  if(!name||!text)return;
-  const div=document.createElement('div');
-  div.className='card';
-  div.innerHTML='<div class="stars">★★★★★</div><p>'+text+'</p>';
-  document.getElementById('reviewGrid').appendChild(div);
-}
+  // Reviews toevoegen
+  function addReview(){
+    const name = document.getElementById('rName').value.trim();
+    const text = document.getElementById('rText').value.trim();
+    if(!name || !text){
+      alert("Vul zowel je naam als review in!");
+      return;
+    }
+    const div = document.createElement('div');
+    div.className = 'card';
+    div.innerHTML = '<div class="stars">★★★★★</div><p>' + text + '</p>';
+    document.getElementById('reviewGrid').appendChild(div);
+    document.getElementById('rName').value = '';
+    document.getElementById('rText').value = '';
+  }
+
+  // Contactformulier (frontend alert, geen server-side functionaliteit)
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('cName').value.trim();
+    const email = document.getElementById('cEmail').value.trim();
+    const message = document.getElementById('cMessage').value.trim();
+    if(!name || !email || !message){
+      alert("Vul alle velden in!");
+      return;
+    }
+    alert("Bedankt voor je bericht, " + name + "! We nemen snel contact met je op.");
+    // Optioneel: hier kun je server-side code toevoegen om berichten echt te verzenden
+    document.getElementById('contactForm').reset();
+  });
 </script>
 
 </body>
-   </html>
+</html>
