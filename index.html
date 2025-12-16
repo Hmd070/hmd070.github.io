@@ -64,7 +64,8 @@ h3{font-size:22px; font-weight:700;}
 .tag{display:inline-block; font-size:12px; font-weight:600; padding:4px 10px; margin-right:8px; margin-top:10px; border-radius:4px; background:rgba(30,124,255,.15); color:var(--blue);}
 
 /* INSTAGRAM GRID */
-#instagram-section{padding:80px 26px; text-align:center; background:linear-gradient(135deg, rgba(30,124,255,.45), rgba(74,163,255,.2)); border-radius:28px; margin-bottom:50px;}
+/* Opmerking: Ik heb de padding van de sectie aangepast om beter aan te sluiten bij de andere secties voor een consistente flow, maar de unieke achtergrond en styling behouden. */
+#instagram-section{padding:100px 26px; text-align:center; background:linear-gradient(135deg, rgba(30,124,255,.45), rgba(74,163,255,.2)); border-radius:28px; margin-bottom:50px;}
 #instagram-section h2{font-size:2.5rem; font-weight:800; color:#fff; margin-bottom:30px; text-shadow:2px 2px 15px rgba(0,0,0,0.4);}
 #instagram-section .elfsight-app-7b7fb468-08eb-4513-ae6c-f38cd6c653b1{border-radius:28px; overflow:hidden; box-shadow:0 15px 30px rgba(30,124,255,.25); transition: transform .3s ease, box-shadow .3s ease;}
 #instagram-section .elfsight-app-7b7fb468-08eb-4513-ae6c-f38cd6c653b1:hover{transform:translateY(-5px); box-shadow:0 25px 50px rgba(30,124,255,.35);}
@@ -111,14 +112,13 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:100px 26px; text-alig
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="container hero-grid">
     <div>
       <h1>Design dat je merk laat groeien.<br><span style="color:var(--blue)">Betrouwbaar, persoonlijk en karaktervol.</span></h1>
       <p class="lead">VORMIQ helpt merken die serieus genomen willen worden. Al sinds jonge leeftijd bezig met grafische vormgeving en digitale creatie, nu als zelfstandige eenmanszaak. We combineren passie, strategie en techniek voor een uitstraling die klopt.</p>
       <div class="buttons">
-        <a href="#diensten" class="btn primary">Bekijk diensten</a>
+        <a href="#portfolio" class="btn primary">Bekijk werk</a>
         <a href="#contact" class="btn">Neem contact op</a>
       </div>
     </div>
@@ -126,34 +126,10 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:100px 26px; text-alig
   </div>
 </section>
 
-<!-- DIENSTEN -->
-<section id="diensten">
-  <div class="container">
-    <h2>Diensten</h2>
-    <p class="lead">Alles wat een merk nodig heeft om professioneel en herkenbaar te zijn.</p>
-    <div class="grid">
-      <div class="card"><h3>Branding & Logo</h3><p>Logo’s en visuele identiteiten die vertrouwen en karakter uitstralen.</p></div>
-      <div class="card"><h3>Webdesign</h3><p>Websites die functioneel, mobielvriendelijk en conversiegericht zijn.</p></div>
-      <div class="card"><h3>Artwork & Visuals</h3><p>Digitale visuals voor artiesten, campagnes en branding.</p></div>
-      <div class="card"><h3>AI & Motion</h3><p>Animaties en creatieve content als verlengstuk van je merk.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- INSTAGRAM GRID -->
-<section id="instagram-section">
-  <h2>Onze Creatieve Instagram Feed</h2>
-  <!-- Nieuwe Elfsight Instagram Embed -->
-  <script src="https://elfsightcdn.com/platform.js" async></script>
-  <div class="elfsight-app-7b7fb468-08eb-4513-ae6c-f38cd6c653b1" data-elfsight-app-lazy></div>
-  <p>Bekijk meer op <a href="https://instagram.com/vorm.iq" target="_blank">@vorm.iq</a></p>
-</section>
-
-<!-- PORTFOLIO / ANIMATED ALBUMCOVERS -->
 <section id="portfolio">
   <div class="container">
-    <h2>Onze Album Covers</h2>
-    <p class="lead">Een selectie van onze meest creatieve en animated albumcovers.</p>
+    <h2>Onze Animated Album Covers</h2>
+    <p class="lead">Een selectie van onze meest creatieve en geanimeerde albumcovers. **Zet je schrap voor de wauw-factor!**</p>
     <div class="portfolio-grid">
       <div class="project-card">
         <video src="leblanco.mp4" autoplay loop muted playsinline></video>
@@ -194,7 +170,26 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:100px 26px; text-alig
   </div>
 </section>
 
-<!-- PRIJZEN / PAKKETTEN -->
+<section id="instagram-section">
+  <h2>Onze Creatieve Instagram Feed</h2>
+  <script src="https://elfsightcdn.com/platform.js" async></script>
+  <div class="elfsight-app-7b7fb468-08eb-4513-ae6c-f38cd6c653b1" data-elfsight-app-lazy></div>
+  <p>Bekijk al onze recente projecten op <a href="https://instagram.com/vorm.iq" target="_blank">@vorm.iq</a></p>
+</section>
+
+<section id="diensten">
+  <div class="container">
+    <h2>Diensten</h2>
+    <p class="lead">Alles wat een merk nodig heeft om professioneel en herkenbaar te zijn.</p>
+    <div class="grid">
+      <div class="card"><h3>Branding & Logo</h3><p>Logo’s en visuele identiteiten die vertrouwen en karakter uitstralen.</p></div>
+      <div class="card"><h3>Webdesign</h3><p>Websites die functioneel, mobielvriendelijk en conversiegericht zijn.</p></div>
+      <div class="card"><h3>Artwork & Visuals</h3><p>Digitale visuals voor artiesten, campagnes en branding.</p></div>
+      <div class="card"><h3>AI & Motion</h3><p>Animaties en creatieve content als verlengstuk van je merk.</p></div>
+    </div>
+  </div>
+</section>
+
 <section id="prijzen">
   <div class="container">
     <h2>Onze Pakketten</h2>
@@ -239,7 +234,6 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:100px 26px; text-alig
   </div>
 </section>
 
-<!-- REVIEWS -->
 <section id="reviews">
   <div class="container">
     <h2>Reviews</h2>
@@ -257,7 +251,6 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:100px 26px; text-alig
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="container">
     <h2>Contact</h2>
@@ -274,15 +267,12 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:100px 26px; text-alig
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   © 2025 VORMIQ — Actief sinds 2016
 </footer>
 
-<!-- WHATSAPP -->
 <a class="whatsapp" href="https://wa.me/31617177307" target="_blank">💬 WhatsApp</a>
 
-<!-- SCRIPTS -->
 <script>
   // Reviews toevoegen
   function addReview(){
