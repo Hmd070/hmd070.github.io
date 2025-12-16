@@ -38,10 +38,10 @@ h2{font-size:clamp(32px,4.2vw,58px); font-weight:800; margin-bottom:22px;}
 h3{font-size:22px; font-weight:700;}
 .lead{max-width:760px; color:var(--muted); font-size:19px;}
 
-/* HERO */
+/* HERO AANPASSINGEN: Verwijdering van grid om content full-width te maken */
 .hero{padding-top:240px;}
-.hero-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:90px; align-items:center;}
-.hero-visual{height:440px; border-radius:var(--radius); border:1px solid rgba(255,255,255,.12); background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.02)), radial-gradient(300px 220px at 70% 20%, rgba(30,124,255,.45), transparent 60%); display:flex; align-items:center; justify-content:center; font-weight:800; letter-spacing:.32em; opacity:.85;}
+/* .hero-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:90px; align-items:center;} -- VERWIJDERD/GENEGEERD */
+/* .hero-visual{...} -- VERWIJDERD */
 .buttons{margin-top:52px; display:flex; gap:20px; flex-wrap:wrap;}
 .btn{padding:20px 42px; border-radius:999px; border:1px solid rgba(255,255,255,.22); font-weight:700; transition:all 0.3s ease;}
 .btn.primary{background:linear-gradient(135deg,var(--blue),#4aa3ff); border:none; color:#fff;}
@@ -64,7 +64,6 @@ h3{font-size:22px; font-weight:700;}
 .tag{display:inline-block; font-size:12px; font-weight:600; padding:4px 10px; margin-right:8px; margin-top:10px; border-radius:4px; background:rgba(30,124,255,.15); color:var(--blue);}
 
 /* INSTAGRAM GRID */
-/* Opmerking: Ik heb de padding van de sectie aangepast om beter aan te sluiten bij de andere secties voor een consistente flow, maar de unieke achtergrond en styling behouden. */
 #instagram-section{padding:100px 26px; text-align:center; background:linear-gradient(135deg, rgba(30,124,255,.45), rgba(74,163,255,.2)); border-radius:28px; margin-bottom:50px;}
 #instagram-section h2{font-size:2.5rem; font-weight:800; color:#fff; margin-bottom:30px; text-shadow:2px 2px 15px rgba(0,0,0,0.4);}
 #instagram-section .elfsight-app-7b7fb468-08eb-4513-ae6c-f38cd6c653b1{border-radius:28px; overflow:hidden; box-shadow:0 15px 30px rgba(30,124,255,.25); transition: transform .3s ease, box-shadow .3s ease;}
@@ -95,7 +94,7 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:100px 26px; text-alig
 .whatsapp{position:fixed; right:26px; bottom:26px; background:linear-gradient(135deg,#22c55e,#16a34a); color:#fff; padding:18px 26px; border-radius:999px; font-weight:800;}
 
 /* MOBILE */
-@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-visual{height:320px}}
+@media(max-width:900px){/* .hero-grid{grid-template-columns:1fr} -- VERWIJDERD */ .hero-visual{height:320px}}
 @media(max-width:768px){#instagram-section{padding:50px 20px;} #instagram-section h2{font-size:1.8rem;}}
 @media(max-width:600px){.logo img{height:76px;} .logo-text{font-size:15px;letter-spacing:.42em}}
 </style>
@@ -113,7 +112,7 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:100px 26px; text-alig
 </nav>
 
 <section class="hero">
-  <div class="container hero-grid">
+  <div class="container">
     <div>
       <h1>Design dat je merk laat groeien.<br><span style="color:var(--blue)">Betrouwbaar, persoonlijk en karaktervol.</span></h1>
       <p class="lead">VORMIQ helpt merken die serieus genomen willen worden. Al sinds jonge leeftijd bezig met grafische vormgeving en digitale creatie, nu als zelfstandige eenmanszaak. We combineren passie, strategie en techniek voor een uitstraling die klopt.</p>
@@ -122,8 +121,7 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:100px 26px; text-alig
         <a href="#contact" class="btn">Neem contact op</a>
       </div>
     </div>
-    <div class="hero-visual">VORMIQ</div>
-  </div>
+    </div>
 </section>
 
 <section id="portfolio">
