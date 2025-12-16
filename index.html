@@ -21,24 +21,19 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 html,body{font-family:'Inter',system-ui,sans-serif;background:radial-gradient(1200px 500px at 90% -10%, rgba(30,124,255,.32), transparent 60%), radial-gradient(800px 400px at -10% 30%, rgba(30,124,255,.14), transparent 60%), var(--bg);color:var(--fg);line-height:1.65;}
 a{text-decoration:none;color:inherit;}
-
-/* NAV */
 nav{position:fixed; top:0; width:100%; z-index:1000; backdrop-filter:blur(20px); background:rgba(5,7,12,.7); border-bottom:1px solid rgba(255,255,255,.06);}
 .nav-inner{max-width:var(--max); margin:auto; padding:22px 26px; display:flex; justify-content:space-between; align-items:center;}
 .logo{display:flex; align-items:center; gap:18px;}
 .logo img{height:64px;}
 .logo-text{font-weight:900; letter-spacing:.36em;}
-.nav-cta{background:linear-gradient(135deg,var(--blue),#4aa3ff); padding:14px 30px; border-radius:999px; font-weight:700;}
-
-/* SECTIONS */
+.nav-cta{background:linear-gradient(135deg,var(--blue),#4aa3ff); padding:14px 30px; border-radius:999px; font-weight:700; color:#fff;}
+.nav-cta:hover{transform:translateY(-2px);}
 section{padding:160px 26px;}
 .container{max-width:var(--max); margin:auto;}
 h1{font-size:clamp(44px,6.2vw,92px); font-weight:900; line-height:1.05;}
 h2{font-size:clamp(32px,4.2vw,58px); font-weight:800; margin-bottom:22px;}
 h3{font-size:22px; font-weight:700;}
 .lead{max-width:760px; color:var(--muted); font-size:19px;}
-
-/* HERO */
 .hero{padding-top:240px;}
 .hero-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:90px; align-items:center;}
 .hero-visual{height:440px; border-radius:var(--radius); border:1px solid rgba(255,255,255,.12); background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.02)), radial-gradient(300px 220px at 70% 20%, rgba(30,124,255,.45), transparent 60%); display:flex; align-items:center; justify-content:center; font-weight:800; letter-spacing:.32em; opacity:.85;}
@@ -46,14 +41,10 @@ h3{font-size:22px; font-weight:700;}
 .btn{padding:20px 42px; border-radius:999px; border:1px solid rgba(255,255,255,.22); font-weight:700; transition:all 0.3s ease;}
 .btn.primary{background:linear-gradient(135deg,var(--blue),#4aa3ff); border:none; color:#fff;}
 .btn:hover{transform:translateY(-3px)}
-
-/* GRID (Diensten/Reviews) */
 .grid{margin-top:90px; display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:46px;}
 .card{background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,0)); border:1px solid rgba(255,255,255,.1); padding:48px; border-radius:var(--radius);}
 .card p{color:var(--muted);}
 .price{font-size:24px; font-weight:800; margin-top:16px;}
-
-/* PORTFOLIO */
 .portfolio-grid{margin-top:70px; display:grid; grid-template-columns:repeat(auto-fit,minmax(350px,1fr)); gap:40px;}
 .project-card{border-radius:var(--radius); overflow:hidden; border:1px solid rgba(255,255,255,.12); position:relative; transition:transform .3s ease, box-shadow .3s ease; background:var(--bg);}
 .project-card:hover{transform:translateY(-5px); box-shadow:0 15px 30px rgba(30,124,255,.25);}
@@ -62,15 +53,11 @@ h3{font-size:22px; font-weight:700;}
 .project-info h3{margin-bottom:8px; color:var(--blue); font-weight:800;}
 .project-info p{color:var(--muted); font-size:16px;}
 .tag{display:inline-block; font-size:12px; font-weight:600; padding:4px 10px; margin-right:8px; margin-top:10px; border-radius:4px; background:rgba(30,124,255,.15); color:var(--blue);}
-
-/* INSTAGRAM GRID */
 #instagram-section{padding:80px 26px; text-align:center; background:linear-gradient(135deg, rgba(30,124,255,.45), rgba(74,163,255,.2)); border-radius:28px; margin-bottom:50px;}
 #instagram-section h2{font-size:2.5rem; font-weight:800; color:#fff; margin-bottom:30px; text-shadow:2px 2px 15px rgba(0,0,0,0.4);}
 #instagram-section .elfsight-app-7b7fb468-08eb-4513-ae6c-f38cd6c653b1{border-radius:28px; overflow:hidden; box-shadow:0 15px 30px rgba(30,124,255,.25); transition: transform .3s ease, box-shadow .3s ease;}
 #instagram-section .elfsight-app-7b7fb468-08eb-4513-ae6c-f38cd6c653b1:hover{transform:translateY(-5px); box-shadow:0 25px 50px rgba(30,124,255,.35);}
 #instagram-section p{margin-top:15px; color:#f4f6ff;}
-
-/* PRIJZEN / PAKKETTEN */
 .pricing-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:40px; margin-top:50px;}
 .pricing-card{background:var(--bg); border:1px solid rgba(255,255,255,.12); border-radius:var(--radius); padding:40px 30px; text-align:center; transition:transform .3s ease, box-shadow .3s ease;}
 .pricing-card:hover{transform:translateY(-5px); box-shadow:0 15px 30px rgba(30,124,255,.25);}
@@ -80,23 +67,19 @@ h3{font-size:22px; font-weight:700;}
 .pricing-card ul li{margin-bottom:10px;}
 .pricing-card .price{font-size:28px; font-weight:900; margin-bottom:20px;}
 .pricing-card .btn{width:100%; display:inline-block; margin-top:10px;}
-
-/* REVIEWS */
 .stars{color:#facc15; margin-bottom:10px;}
-
-/* CONTACT FORM */
 input,textarea{width:100%; padding:12px; margin-bottom:12px; border-radius:8px; border:1px solid rgba(255,255,255,.2); background:var(--bg); color:var(--fg);}
-
-/* FOOTER */
 footer{border-top:1px solid rgba(255,255,255,.06); padding:100px 26px; text-align:center; color:var(--muted);}
-
-/* WHATSAPP */
 .whatsapp{position:fixed; right:26px; bottom:26px; background:linear-gradient(135deg,#22c55e,#16a34a); color:#fff; padding:18px 26px; border-radius:999px; font-weight:800;}
-
-/* MOBILE */
 @media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-visual{height:320px}}
 @media(max-width:768px){#instagram-section{padding:50px 20px;} #instagram-section h2{font-size:1.8rem;}}
 @media(max-width:600px){.logo img{height:76px;} .logo-text{font-size:15px;letter-spacing:.42em}}
+/* ANIMATED ALBUMCOVERS */
+.albumcovers-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:30px; margin-top:50px;}
+.albumcovers-card{border-radius:28px; overflow:hidden; border:2px solid rgba(30,124,255,.25); transition:transform .3s ease, box-shadow .3s ease; background:rgba(0,0,0,.2);}
+.albumcovers-card:hover{transform:translateY(-5px); box-shadow:0 20px 50px rgba(30,124,255,.4);}
+.albumcovers-card img{width:100%; height:250px; object-fit:cover; display:block;}
+.albumcovers-card h4{color:var(--blue); margin:15px; text-align:center;}
 </style>
 </head>
 <body>
@@ -111,7 +94,6 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:100px 26px; text-alig
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="container hero-grid">
     <div>
@@ -126,7 +108,6 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:100px 26px; text-alig
   </div>
 </section>
 
-<!-- DIENSTEN -->
 <section id="diensten">
   <div class="container">
     <h2>Diensten</h2>
@@ -140,12 +121,27 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:100px 26px; text-alig
   </div>
 </section>
 
+<!-- ANIMATED ALBUMCOVERS -->
+<section id="albumcovers">
+  <div class="container">
+    <h2>Animated Albumcovers</h2>
+    <p class="lead">Onze meest opvallende en dynamische albumcovers.</p>
+    <div class="albumcovers-grid">
+      <div class="albumcovers-card"><img src="leblanco.png" alt="Leblanco"><h4>Leblanco</h4></div>
+      <div class="albumcovers-card"><img src="ddouble.png" alt="D-Double"><h4>D-Double</h4></div>
+      <div class="albumcovers-card"><img src="ftf1.png" alt="FatahFTF 1"><h4>FatahFTF 1</h4></div>
+      <div class="albumcovers-card"><img src="ftf2.png" alt="FatahFTF 2"><h4>FatahFTF 2</h4></div>
+      <div class="albumcovers-card"><img src="hrndo.png" alt="HRNDO"><h4>HRNDO</h4></div>
+    </div>
+  </div>
+</section>
+
 <!-- INSTAGRAM GRID -->
 <section id="instagram-section">
   <h2>Onze Creatieve Instagram Feed</h2>
   <script src="https://elfsightcdn.com/platform.js" async></script>
   <div class="elfsight-app-7b7fb468-08eb-4513-ae6c-f38cd6c653b1" data-elfsight-app-lazy></div>
-  <p>Bekijk meer op <a href="https://instagram.com/jouwaccount" target="_blank">Instagram</a></p>
+  <p>Bekijk meer op <a href="https://instagram.com/vorm.iq" target="_blank" style="color:#fff; text-decoration:underline;">Instagram</a></p>
 </section>
 
 <!-- PORTFOLIO -->
@@ -159,11 +155,7 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:100px 26px; text-alig
         <div class="project-info">
           <h3>E-commerce Platform Redesign</h3>
           <p>Complete rebranding en webdesign voor een fictieve fashion retailer. Nadruk op UX/UI en mobiele conversie.</p>
-          <div class="tags">
-            <span class="tag">Webdesign</span>
-            <span class="tag">UI/UX</span>
-            <span class="tag">Branding</span>
-          </div>
+          <div class="tags"><span class="tag">Webdesign</span><span class="tag">UI/UX</span><span class="tag">Branding</span></div>
         </div>
       </a>
       <a href="#" class="project-card">
@@ -171,11 +163,7 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:100px 26px; text-alig
         <div class="project-info">
           <h3>Album Artwork: 'The Quantum Leap'</h3>
           <p>Opvallende visuele identiteit voor een DJ/Producer. Inclusief logo variaties en social media assets.</p>
-          <div class="tags">
-            <span class="tag">Artwork</span>
-            <span class="tag">Branding</span>
-            <span class="tag">Visuals</span>
-          </div>
+          <div class="tags"><span class="tag">Artwork</span><span class="tag">Branding</span><span class="tag">Visuals</span></div>
         </div>
       </a>
       <a href="#" class="project-card">
@@ -183,29 +171,20 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:100px 26px; text-alig
         <div class="project-info">
           <h3>Concept Art met AI-Integratie</h3>
           <p>Een reeks innovatieve beelden en motion graphics, snel gegenereerd en bewerkt met AI tools.</p>
-          <div class="tags">
-            <span class="tag">AI Design</span>
-            <span class="tag">Motion</span>
-            <span class="tag">Concept</span>
-          </div>
+          <div class="tags"><span class="tag">AI Design</span><span class="tag">Motion</span><span class="tag">Concept</span></div>
         </div>
       </a>
-    </div>
-    <div class="buttons" style="text-align:center; margin-top:80px;">
-      <a href="#contact" class="btn primary">Start je project vandaag nog</a>
     </div>
   </div>
 </section>
 
-<!-- PRIJZEN / PAKKETTEN -->
+<!-- PRIJZEN -->
 <section id="prijzen">
   <div class="container">
     <h2>Onze Pakketten</h2>
-    <p class="lead">Kies het pakket dat past bij jouw merk en budget. Van startende merken tot complete digitale creatie.</p>
     <div class="pricing-grid">
       <div class="pricing-card">
         <h3>Starter</h3>
-        <p>Ideaal voor nieuwe merken die een professionele basis willen.</p>
         <ul>
           <li>Logo & Visuele Identiteit</li>
           <li>Kleurenpalet & Typografie</li>
@@ -216,10 +195,9 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:100px 26px; text-alig
       </div>
       <div class="pricing-card popular">
         <h3>Growth</h3>
-        <p>Voor merken die willen groeien met branding + website.</p>
         <ul>
           <li>Alles in Starter</li>
-          <li>Professionele Website (mobielvriendelijk, SEO-ready)</li>
+          <li>Professionele Website</li>
           <li>Social media templates</li>
           <li>Branding integratie in alle assets</li>
         </ul>
@@ -228,7 +206,6 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:100px 26px; text-alig
       </div>
       <div class="pricing-card">
         <h3>Pro</h3>
-        <p>Complete digitale creatie, ideaal voor gevestigde merken of projecten.</p>
         <ul>
           <li>Alles in Growth</li>
           <li>Artwork & Motion Graphics</li>
@@ -246,10 +223,9 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:100px 26px; text-alig
 <section id="reviews">
   <div class="container">
     <h2>Reviews</h2>
-    <p class="lead">Wat klanten zeggen over VORMIQ.</p>
     <div class="grid" id="reviewGrid">
       <div class="card"><div class="stars">★★★★★</div><p>“Ze luisteren echt, denken mee en leveren kwaliteit die klopt.”</p></div>
-      <div class="card"><div class="stars">★★★★★</div><p>“Persoonlijk, professioneel en creatief. Echt een aanrader.”</p></div>
+      <div class="card"><div class="stars">★★★★★</div><p>“Persoonlijk, professioneel en creatief. Echt een aanrader.”</p</p></div>
     </div>
     <div class="card" style="margin-top:60px">
       <h3>Laat een review achter</h3>
@@ -266,7 +242,7 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:100px 26px; text-alig
     <h2>Contact</h2>
     <p class="lead">Klaar om samen te werken of vragen? Neem vrijblijvend contact op.</p>
     <div class="card">
-      <p><strong>Instagram:</strong> @vormiq.nl</p>
+      <p><strong>Instagram:</strong> <a href="https://instagram.com/vorm.iq" target="_blank">@vorm.iq</a></p>
       <p><strong>WhatsApp:</strong> <a href="https://wa.me/31617177307" target="_blank">💬 WhatsApp</a></p>
       <form id="contactForm">
         <input type="text" id="cName" placeholder="Naam" required>
@@ -315,7 +291,6 @@ footer{border-top:1px solid rgba(255,255,255,.06); padding:100px 26px; text-alig
       return;
     }
     alert("Bedankt voor je bericht, " + name + "! We nemen snel contact met je op.");
-    // Optioneel: hier kun je server-side code toevoegen om berichten echt te verzenden
     document.getElementById('contactForm').reset();
   });
 </script>
